@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package client.IHM;
+package vue;
 import static com.sun.java.accessibility.util.AWTEventMonitor.addWindowListener;
 import java.awt.*;
 import java.awt.event.*;
@@ -28,16 +28,20 @@ import javax.swing.JPanel;
 public class HomeEmployees extends JFrame {
 
     public HomeEmployees(){
-      
+        
+        
+        // JFrame take Screen Size
         Toolkit tk = Toolkit.getDefaultToolkit();
         Dimension dimEcran = tk.getScreenSize(); 
         setSize(dimEcran.width, dimEcran.height);
         setLocationRelativeTo(null);
+        
+        
         JPanel panelNord = new JPanel();
         panelNord.setLayout(new GridLayout(1, 2)); // 1 ligne, 2 colonnes
         JPanel panelBarre = new JPanel();
         BoxLayout layoutBarre = new BoxLayout(panelBarre, BoxLayout.X_AXIS);
-        panelBarre.add(new JLabel("Manager : Monkey D. Dragon "));
+        panelBarre.add(new JLabel("Manager : Laura HOLLARD "));
         panelNord.add(panelBarre);
 
         JPanel panelWest = new JPanel();

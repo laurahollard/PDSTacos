@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package client.IHM;
+package vue;
+
+
 import java.awt.*;
 import javax.swing.*;
 
@@ -15,25 +17,39 @@ import javax.swing.*;
  */
 public class InterfaceGraphique extends JFrame {
     
-        Image img;
+       
     public InterfaceGraphique(){
-            Authentification fenetre = new Authentification(this);
-            setTitle("Interface");
-            setSize(800, 400);
-            setLocationRelativeTo(null); 
-            setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            this.getContentPane().add(fenetre);
-            setVisible(true);
+           design();   
+            
+            
             }
     
+    public void design(){
+            JFrame f = new JFrame();
+            setTitle("Interface");
+            setSize(800, 400);
+            Toolkit tk = Toolkit.getDefaultToolkit();
+            Dimension dimEcran = tk.getScreenSize(); 
+            setSize(dimEcran.width, dimEcran.height);
+            setLocationRelativeTo(null); 
+            setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+            Authentification a = new Authentification();
+            this.getContentPane().add(a, BorderLayout.CENTER);
+           // Accueil aa = new Accueil();
+            // this.getContentPane().add(aa);
+            setVisible(true);
+    }
     
+  
       public static void main(String[] args) {
        	
-          InterfaceGraphique inter = new InterfaceGraphique();
-          
-       
-     
-        
+	
+       // InterfaceGraphique ihm = new InterfaceGraphique();
+        // ihm.setVisible(true);
+      // InterfaceGraphique i = new InterfaceGraphique();
+     //   i.setVisible(true);
+     HomeManager m = new HomeManager();
+     m.setVisible(true);
 	
     }
 }
